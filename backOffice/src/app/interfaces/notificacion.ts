@@ -2,7 +2,7 @@ export interface Notificacion {
     _id?:         ID;
     tipo:        string;
     mensaje:     string;
-    usuario:       string;
+    tiempo:       Number;
 
     createdAt?:   AtedAt;
     updatedAt?:   AtedAt;

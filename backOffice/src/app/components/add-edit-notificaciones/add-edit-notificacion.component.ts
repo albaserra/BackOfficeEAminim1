@@ -27,7 +27,7 @@ export class AddEditNotificacionComponent {
     this.formNotificacion = this.fb.group({
       fecha: ['', Validators.required],
       mensaje: ['', Validators.required],
-      usuario: ['', Validators.required]
+      tiempo: ['', Validators.required]
     })
     this.idNotificacion = aRouter.snapshot.paramMap.get("idNotificacion")!;
 
@@ -48,7 +48,7 @@ export class AddEditNotificacionComponent {
     const notificacion: Notificacion = {
       tipo: this.formNotificacion.value.tipo,
       mensaje: this.formNotificacion.value.mensaje,
-      usuario: this.formNotificacion.value.usuario
+      tiempo: this.formNotificacion.value.tiempo
     }
 
     this.loading = true;
@@ -86,7 +86,7 @@ export class AddEditNotificacionComponent {
       this.formNotificacion.patchValue({
         tipo: data.tipo,
         mensaje: data.mensaje,
-        usuario: data.usuario
+        tiempo: data.tiempo
       })
     })
   }
